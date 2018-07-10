@@ -1,0 +1,23 @@
+{
+  "name": "vjs-auth-voipaccount",
+  "version": "1.0.0",
+  "description": "Vialer-js Authentication provider for any SIP-over-WSS provider.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vialer/vjs-auth-voipaccount.git"
+  },
+  "keywords": [
+    "vialer-js",
+    "softphone"
+  ],
+  "author": "Windshaft B.V.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vialer/vjs-auth-voipaccount/issues"
+  },
+  "homepage": "https://github.com/vialer/vjs-auth-voipaccount#readme"
+}
