@@ -1,5 +1,5 @@
 {
-  "name": "vjs-auth-voipaccount",
+  "name": "vialer-js-auth-voipaccount",
   "version": "1.0.0",
   "description": "Vialer-js Authentication provider for any SIP-over-WSS provider.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vialer/vjs-auth-voipaccount.git"
+    "url": "git+https://github.com/vialer/vialer-js-auth-voipaccount.git"
   },
   "keywords": [
     "vialer-js",
