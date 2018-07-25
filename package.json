@@ -1,5 +1,5 @@
 {
-  "name": "vjs-user-adapter-voip",
+  "name": "vjs-adapter-user-voip",
   "version": "1.0.0",
   "description": "Vialer-js User adapter for Websocket SIP + WebRTC providers.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vialer/vjs-user-adapter-voip.git"
+    "url": "git+https://github.com/vialer/vjs-adapter-user-voip.git"
   },
   "keywords": [
     "vialer-js",
@@ -17,7 +17,7 @@
   "author": "Windshaft B.V.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vialer/vjs-user-adapter-voip/issues"
+    "url": "https://github.com/vialer/vjs-adapter-user-voip/issues"
   },
-  "homepage": "https://github.com/vialer/vjs-user-adapter-voip#readme"
+  "homepage": "https://github.com/vialer/vjs-adapter-user-voip#readme"
 }
