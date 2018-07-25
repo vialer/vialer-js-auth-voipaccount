@@ -1,14 +1,14 @@
 {
-  "name": "vialer-js-user-voip",
+  "name": "vjs-user-adapter-voip",
   "version": "1.0.0",
-  "description": "Vialer-js User provider for generic SIP-over-WSS endpoints.",
+  "description": "Vialer-js User adapter for generic SIP-over-WSS endpoints.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vialer/vialer-js-user-voip.git"
+    "url": "git+https://github.com/vialer/vjs-user-adapter-voip.git"
   },
   "keywords": [
     "vialer-js",
@@ -17,7 +17,7 @@
   "author": "Windshaft B.V.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vialer/vialer-js-user-voip/issues"
+    "url": "https://github.com/vialer/vjs-user-adapter-voip/issues"
   },
-  "homepage": "https://github.com/vialer/vialer-js-user-voip#readme"
+  "homepage": "https://github.com/vialer/vjs-user-adapter-voip#readme"
 }
