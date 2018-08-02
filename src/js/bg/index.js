@@ -8,7 +8,13 @@ class UserAdapterVoip extends UserAdapter {
 
 
     _initialState() {
-        return {}
+        return {
+            platform: {
+                account: {
+                    selection: false,
+                },
+            }
+        }
     }
 
 
@@ -19,9 +25,9 @@ class UserAdapterVoip extends UserAdapter {
     * @param {Object} options - The options to pass along.
     * @param {String} options.username - Username formatted as `accountid@domain`.
     * @param {Object} options.password - Password to the SIP endpoint account.
-    * @param {Object} options.sipEndpoint - Domain to the SIP-over-wss service.
+    * @param {Object} options.endpoint - Domain to the SIP-over-wss service.
     */
-    async login({username, password, sipEndpoint}) {
+    async login({username, password, endpoint}) {
         this.app.setState({user: {status: 'login'}})
         let sessionName = username
         username = username.split('@')[0]
@@ -32,20 +38,25 @@ class UserAdapterVoip extends UserAdapter {
 
         if (this.app.state.app.session.active !== sessionName) {
             // State is reinitialized, but we are not done loading yet.
-            let keptState = {user: {status: 'login'}}
-            this.app.setSession(sessionName, keptState)
+            let keptState = {user: {status: 'login'}, settings: {webrtc: {endpoint: {uri: endpoint}}}}
+            await this.app.changeSession(sessionName, keptState)
         }
 
         try {
+            await this.app.modules.calls.register({
+                account: {username, password, uri: sessionName}, endpoint,
+                register: true,
+            })
             await super.login({username, password, userFields})
-            await this.app.setState({settings: {sipEndpoint, webrtc: {account: {selected: {username, password, uri: sessionName}}}}}, {persist: true})
-            await this.app.modules.calls.connect({register: true})
-
+            await this.app.setState({settings: {webrtc: {
+                account: {selected: {username, password, uri: sessionName}},
+                endpoint: {uri: endpoint},
+            }}}, {persist: true})
         } catch (err) {
-            console.log("AUTHENTICATION ERROR")
+            this.app.notify({icon: 'warning', message: this.app.$t('failed to login; please check your credentials.'), type: 'warning'})
+        } finally {
+            this.app.setState({user: {status: null}})
         }
-
-
     }
 
 

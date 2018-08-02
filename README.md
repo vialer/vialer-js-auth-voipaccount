@@ -1,2 +1,2 @@
-# vjs-auth-voipaccount
-Vialer-js Authentication provider for any SIP-over-WSS provider.
+# vjs-adapter-user-voip
+Vialer-js User adapter for Websocket SIP + WebRTC providers.
