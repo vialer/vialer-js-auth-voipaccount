@@ -1,23 +1,26 @@
 {
-  "name": "vjs-adapter-user-voip",
-  "version": "1.0.0",
-  "description": "Vialer-js User adapter for Websocket SIP + WebRTC providers.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vialer/vjs-adapter-user-voip.git"
-  },
-  "keywords": [
-    "vialer-js",
-    "softphone"
-  ],
-  "author": "Windshaft B.V.",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vialer/vjs-adapter-user-voip/issues"
-  },
-  "homepage": "https://github.com/vialer/vjs-adapter-user-voip#readme"
+    "name": "vjs-adapter-user-voip",
+    "version": "1.0.0",
+    "description": "Vialer-js User adapter for Websocket SIP + WebRTC providers.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vialer/vjs-adapter-user-voip.git"
+    },
+    "keywords": [
+        "vialer-js",
+        "softphone"
+    ],
+    "peerDependencies": {
+        "vialer-js": "4.x"
+    },
+    "author": "Windshaft B.V.",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vialer/vjs-adapter-user-voip/issues"
+    },
+    "homepage": "https://github.com/vialer/vjs-adapter-user-voip#readme"
 }
