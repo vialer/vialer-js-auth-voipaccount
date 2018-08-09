@@ -43,7 +43,7 @@ class UserAdapterVoip extends UserAdapter {
         }
 
         try {
-            await this.app.modules.calls.register({
+            await this.app.plugins.calls.register({
                 account: {username, password, uri: sessionName}, endpoint,
                 register: true,
             })
