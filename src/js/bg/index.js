@@ -44,14 +44,22 @@ class UserAdapterVoip extends UserAdapter {
 
         try {
             await this.app.plugins.calls.register({
-                account: {username, password, uri: sessionName}, endpoint,
+                account: {id: shortid.generate(), username, password, uri: sessionName}, endpoint,
                 register: true,
             })
             await super.login({username, password, userFields})
-            await this.app.setState({settings: {webrtc: {
-                account: {selected: {username, password, uri: sessionName}},
-                endpoint: {uri: endpoint},
-            }}}, {persist: true})
+
+            await this.app.setState({
+                // We are are already registered, but the store wasn't
+                // ready yet before login.
+                calls: {ua: {status: 'registered'}},
+                settings: {
+                    webrtc: {
+                        account: {selected: {username, password, uri: sessionName}},
+                        endpoint: {uri: endpoint},
+                    },
+                }
+            }, {persist: true})
         } catch (err) {
             this.app.notify({icon: 'warning', message: this.app.$t('failed to login; please check your credentials.'), type: 'warning'})
         } finally {
