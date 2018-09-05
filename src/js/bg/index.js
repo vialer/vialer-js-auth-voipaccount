@@ -48,14 +48,19 @@ class UserAdapterVoip extends UserAdapter {
                 register: true,
             })
             await super.login({username, password, userFields})
-
+            let account = {
+                name: sessionName,
+                username,
+                password,
+                uri: sessionName,
+            }
             await this.app.setState({
                 // We are are already registered, but the store wasn't
                 // ready yet before login.
                 calls: {ua: {status: 'registered'}},
                 settings: {
                     webrtc: {
-                        account: {selected: {username, password, uri: sessionName}},
+                        account: {selected: account, using: account},
                         endpoint: {uri: endpoint},
                     },
                 }
