@@ -8,9 +8,7 @@ class UserAdapterVoip extends UserAdapter {
 
 
     _initialState() {
-        return {
-
-        }
+        return {}
     }
 
 
