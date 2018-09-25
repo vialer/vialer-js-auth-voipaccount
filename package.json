@@ -1,6 +1,6 @@
 {
     "name": "vjs-adapter-user-voip",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "description": "Vialer-js User adapter for Websocket SIP + WebRTC providers.",
     "main": "index.js",
     "scripts": {
