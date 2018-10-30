@@ -1,2 +1,2 @@
 # vjs-adapter-user-voip
-Vialer-js User adapter for Websocket SIP + WebRTC providers.
+Vialer-js User adapter for generic Websocket SIP + WebRTC providers.
