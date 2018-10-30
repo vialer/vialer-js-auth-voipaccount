@@ -14,6 +14,9 @@
         "vialer-js",
         "softphone"
     ],
+    "files": [
+        "src"
+    ], 
     "author": "Windshaft B.V.",
     "license": "MIT",
     "bugs": {
